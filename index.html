@@ -91,8 +91,8 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <article class="fondos">
+                <div class="col-md-8" id="lista">
+                    <article class="lista">
                         <h3>Menu Diario</h3>
                         
                         <div class="card" style="width: 18rem;">
@@ -101,23 +101,38 @@
 
                             <h5 class="card-title">Churrasco Italiano</h5>
                             <p class="card-text">Trozo de carne de vacuno, generalmente delgado, cocido sobre una plancha, a las brasas o directamente sobre las llamas. </p>
-
+                            <h5 class="card-title pricing-card-title precio">2500</h5>
                           </div>
 
                           <div class="card-footer">
-                              <button type="button" class="btn btn-success"><i class="fa-solid fa-plus"></i> AÑADIR AL CARRITO</button>
+                              <button type="button" class="btn btn-success agregar-carrito" data-id="1"><i class="fa-solid fa-plus"></i> AÑADIR AL CARRITO</button>
                           </div>
                         </div>
                     </article>
                 </div>
                 
                 <div class="col-md-4">
-                    <aside class="fondos">
+                    <aside class="carrito">
                         <h3>Tu Orden Actual</h3>
+                        <table id="lista-carrito" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                       <hr>
                       <div class="icono-medio">
                         <i class="fa-solid fa-cart-shopping fa-2xl"></i>
                       </div>
+                      <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                      
 
                 </div>
 
@@ -286,6 +301,8 @@
   </div>
 </div>
 
-  <script src="js.js"></script>
+  <script src="carrito.js"></script>
+  <script src="pedido.js"></script>
+
 <body>
 <html>  
